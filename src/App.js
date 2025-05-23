@@ -1,15 +1,14 @@
-import React from "react"
-import "./App.css"
-// import FormApp from "./FormApp";
-import TodoApp from "./TodoApp";
+import React, { useEffect, useState } from "react";
+import Practice from "./Practice"
 
-function App(){
-  return(
-    <div className="App-header ">
-      {/* <FormApp/> */}
-      <TodoApp/>
-      <p>kuldeep prajapti</p>
+function App() {
+
+  return (
+    <div>
+      <h1>User Search</h1>
+      <Practice/>
     </div>
   );
 }
+
 export default App;
