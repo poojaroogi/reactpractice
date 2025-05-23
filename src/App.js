@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
-import Practice from "./Practice"
-import DisplayComponent from "./components/listingUpState/DisplayComponent";
-import InputComponet from "./components/listingUpState/InputComponet";
+import Child from "./components/callBack/Child";
 
 function App() {
-  const[text, setText] = useState("")
+const[text, setText] = useState("")
+
+function handleDataFromChild(data){
+  setText(data)
+}
 
   return (
     <div>
-      <InputComponet text={text} setText={setText}/>
-      <DisplayComponent text={text}/>
+      <h4>Data from child component  : {text}</h4>
+      <Child handleDataFromChild={handleDataFromChild}/>
     </div>
   );
 }
